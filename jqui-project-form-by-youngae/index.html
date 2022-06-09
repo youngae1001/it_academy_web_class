@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>제이쿼리 UI 회원가입 폼 만들기</title>
+  <link rel="stylesheet" href="./libs/jquery-ui.min.css">
+  <script src="./libs/external/jquery/jquery.js"></script>
+  <script src="./libs/jquery-ui.min.js"></script>
+  <link rel="stylesheet" href="./form.css">
+  <script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script> <!-- 주소 찾기 모듈 -->
+</head>
+<body>
+  <div id="container">
+    <form action="#">
+      <table id="signup-table">
+        <tr>
+          <th>아이디</th>
+          <td><input type="text" name="id" placeholder="아이디" autocomplete="off"></td>
+        </tr>
+        <tr>
+          <th>비밀번호</th>
+          <td><input type="password" name="pw" placeholder="비밀번호"></td>
+        </tr>
+        <tr>
+          <th>비밀번호 확인</th>
+          <td><input type="password" name="confirmpw" placeholder="비밀번호 확인"></td>
+        </tr>
+        <tr>
+          <th>이름</th>
+          <td><input type="text" name="name" placeholder="이름" autocomplete="off"></td>
+        </tr>
+        <tr>
+          <th>전화번호</th>
+          <td><input type="text" name="phone" placeholder="휴대전화 번호" autocomplete="off"></td>
+        </tr>
+        <tr>
+          <th>주소</th>
+          <td><input type="text" name="addr" placeholder="주소" autocomplete="off"></td>
+        </tr>
+        <tr>
+          <th>상세 주소</th>
+          <td><input type="text" name="addrdetail" placeholder="상세 주소" autocomplete="off"></td>
+        </tr>
+        <tr>
+          <th>생년월일</th>
+          <td><input type="text" name="birth" placeholder="생년월일" autocomplete="off"></td>
+        </tr>
+        <tr>
+          <th>직업</th>
+          <td>
+            <select name="job">
+              <option value="none">무직</option>
+              <option value="student">학생</option>
+              <option value="salaryman">직장인</option>
+              <option value="owner">자영업</option>
+              <option value="housekeeper">주부</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <th>성별</th>
+          <td>
+            <label>
+              <input type="radio" name="gender" value="male" checked>남자
+            </label>
+            <label>
+              <input type="radio" name="gender" value="female">여자
+            </label>
+          </td>
+        </tr>
+        <tr>
+          <th>이메일</th>
+          <td>
+            <input title="정확한 메일 주소를 입력해주세요." type="email" name="email" autocomplete="off">
+            <!-- <select name="emailaddr">
+              <option>직접입력</option>
+              <option value="@naver.com">@naver.com</option>
+              <option value="@google.gmail">@google.gmail</option>
+              <option value="@nate.com">@nate.com</option>
+            </select> -->
+          </td>
+        </tr>
+        <tr>
+          <th>자기소개</th>
+          <td>
+            <textarea name="intro"></textarea>
+          </td>
+        </tr>
+      </table>
+    </form>
+    <div id="buttons">
+      <input title="가입하기" type="submit" id="btn_join" class="btn" value="가입">
+      <input title="처음 상태로" type="reset" id="btn_cancel" class="btn" value="초기화">
+    </div>
+  </div>
+  <script src="./form.js"></script>
+</body>
+</html>
